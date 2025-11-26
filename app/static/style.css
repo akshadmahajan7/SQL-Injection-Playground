@@ -1,0 +1,106 @@
+:root {
+    --bg-color: #050505;
+    --terminal-bg: #0d0d0d;
+    --neon-blue: #00f3ff;
+    --neon-red: #ff0055;
+    --neon-green: #0aff00;
+    --text-color: #e0e0e0;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    font-family: 'Courier New', monospace;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    display: flex;
+    width: 950px;
+    height: 550px;
+    background: rgba(10, 10, 10, 0.8);
+    border: 1px solid #333;
+    box-shadow: 0 0 20px rgba(0, 243, 255, 0.15);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.login-panel {
+    flex: 1;
+    padding: 40px;
+    border-right: 1px solid #333;
+    display: flex;
+    flex-direction: column;
+}
+
+h2 { 
+    color: var(--neon-blue); 
+    text-shadow: 0 0 5px var(--neon-blue);
+    margin-bottom: 30px;
+    letter-spacing: 2px;
+}
+
+input {
+    width: 90%;
+    padding: 12px;
+    margin: 10px 0 20px 0;
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid #555;
+    color: white;
+    font-family: inherit;
+    font-size: 1rem;
+    outline: none;
+}
+input:focus { border-bottom: 1px solid var(--neon-green); }
+
+.btn {
+    width: 95%;
+    padding: 15px;
+    background: transparent;
+    border: 1px solid var(--neon-blue);
+    color: var(--neon-blue);
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.2s;
+}
+.btn:hover { background: var(--neon-blue); color: black; }
+
+.hint-btn {
+    margin-top: auto;
+    background: transparent;
+    border: none;
+    color: #555;
+    cursor: pointer;
+    font-size: 0.8rem;
+    text-align: left;
+}
+.hint-btn:hover { color: var(--neon-red); }
+
+.toggle-container { display: flex; gap: 10px; margin-bottom: 20px; }
+.mode-btn { 
+    padding: 5px 15px; border: 1px solid #333; cursor: pointer; font-size: 0.8rem; color: #555;
+}
+.mode-btn.active { border-color: var(--neon-green); color: var(--neon-green); }
+
+/* Terminal Styling */
+.terminal-panel {
+    flex: 1.2;
+    background-color: var(--terminal-bg);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    font-size: 0.9rem;
+}
+.terminal-header { border-bottom: 1px solid #333; padding-bottom: 10px; margin-bottom: 10px; color: #666; }
+.log-content { flex: 1; overflow-y: auto; font-family: 'Consolas', monospace; }
+.log-entry { margin-bottom: 8px; line-height: 1.4; border-bottom: 1px solid #1a1a1a; padding-bottom: 5px;}
+
+.log-prefix { color: #888; }
+.log-query { color: var(--neon-blue); display: block; margin-left: 15px; font-style: italic;}
+.log-success { color: var(--neon-green); font-weight: bold;}
+.log-fail { color: var(--neon-red); }

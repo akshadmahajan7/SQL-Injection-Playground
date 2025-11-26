@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SQLi Hunter Playground</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<div class="container">
+    <div class="login-panel">
+        <h2 class="glitch" data-text="SYSTEM ACCESS">SYSTEM ACCESS</h2>
+        
+        <div class="toggle-container">
+            <div id="btn-vuln" class="mode-btn active" onclick="setMode('vulnerable')">VULNERABLE</div>
+            <div id="btn-sec" class="mode-btn" onclick="setMode('secure')">SECURE</div>
+        </div>
+
+        <form id="loginForm">
+            <label>USERNAME</label>
+            <input type="text" id="username" name="username" placeholder="admin" autocomplete="off">
+            
+            <label>PASSWORD</label>
+            <input type="text" id="password" name="password" placeholder="******" autocomplete="off">
+            
+            <button type="submit" class="btn">AUTHENTICATE</button>
+        </form>
+
+        <button class="hint-btn" onclick="fillPayload()">[!] AUTO-INJECT PAYLOAD</button>
+    </div>
+
+    <div class="terminal-panel">
+        <div class="terminal-header">
+            <span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span>
+            root@sqli-server:~# tail -f /var/log/db.log
+        </div>
+        <div id="terminal-logs" class="log-content">
+            <div class="log-entry">
+                <span class="log-prefix">[SYSTEM]</span> Ready. Target initialized.
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
