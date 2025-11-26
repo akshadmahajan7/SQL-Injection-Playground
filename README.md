@@ -115,7 +115,7 @@ Contribution Points
 ---
 
 ## ⚠️ Legal Disclaimer
-This project is for _**EDUCATIONAL PURPOSES ONLY**_._** Do not use**_ the _**detection engine**_ against targets you _**don't have explicit permission to test**_. The _**author**_ is _**not responsible**_ for any _**misuse of this tool.**_
+This project is for _**EDUCATIONAL PURPOSES ONLY**_. _**Do not use**_ the _**detection engine**_ against targets you _**don't have explicit permission to test**_. The _**author**_ is _**not responsible**_ for any _**misuse of this tool.**_
 
 ---
 
